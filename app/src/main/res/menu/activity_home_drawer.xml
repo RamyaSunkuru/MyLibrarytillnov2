@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_mylibrary"
+            android:icon="@drawable/ic_menu_my_library"
+            android:title="My Library" />
+        <item
+            android:id="@+id/nav_booklist"
+            android:icon="@drawable/ic_book_search"
+            android:title="Book Search" />
+        <item
+            android:id="@+id/nav_mylist"
+            android:icon="@drawable/ic_list"
+            android:title="My List" />
+        <item
+            android:id="@+id/nav_profile"
+            android:icon="@drawable/ic_user_profile"
+            android:title="My Profile" />
+    </group>
+
+    <item android:title="Miscellaneous">
+        <menu>
+
+            <item
+                android:id="@+id/nav_logout"
+                android:icon="@drawable/ic_logout"
+                android:title="Log Out" />
+        </menu>
+    </item>
+
+</menu>

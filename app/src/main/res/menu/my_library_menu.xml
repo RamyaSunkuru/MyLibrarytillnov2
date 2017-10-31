@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/mylibrary_grid"
+        android:icon="@drawable/ic_grid"
+        android:title="View"
+        app:showAsAction="always">
+    </item>
+    <item
+        android:id="@+id/mylibrary_sort"
+        android:icon="@drawable/sort_button_white"
+        android:title="Sort"
+        app:showAsAction="always">
+        <menu>
+            <item
+                android:id="@+id/menuSortId"
+                android:title="Sort by id" />
+            <item
+                android:id="@+id/menuSortRating"
+                android:title="Sort by rating" />
+            <item
+                android:id="@+id/menuSortTitle"
+                android:title="Sort by title" />
+            <item
+                android:id="@+id/menuSortPublisher"
+                android:title="Sort by publisher" />
+            <item
+                android:id="@+id/menuSortAuthor"
+                android:title="Sort by author" />
+            <item
+                android:id="@+id/menuSortPages"
+                android:title="Sort by pages" />
+        </menu>
+
+    </item>
+
+
+
+</menu>

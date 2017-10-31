@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:id="@+id/booksearch_filterwindow"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_weight="1">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.3"
+        android:paddingBottom="5dp"
+        android:paddingLeft="15dp"
+        android:paddingTop="15dp"
+        android:text="Publisher : " />
+
+    <Spinner
+        android:id="@+id/spinner_publisher"
+        style="@style/Widget.AppCompat.Spinner.Underlined"
+        android:layout_width="170dp"
+        android:layout_height="match_parent"
+        android:layout_weight="0.6"
+        android:backgroundTint="@android:color/holo_blue_bright"
+        android:gravity="center"
+        android:textAlignment="center">
+
+    </Spinner>
+</LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_weight="1">
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.3"
+            android:paddingBottom="5dp"
+            android:paddingLeft="15dp"
+            android:paddingTop="15dp"
+            android:text="Genre :      " />
+
+        <Spinner
+            android:textAlignment="center"
+            android:gravity="center"
+            android:id="@+id/spinner_genre"
+            style="@style/Widget.AppCompat.Spinner.Underlined"
+            android:backgroundTint="@android:color/holo_blue_bright"
+            android:layout_width="170dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.6">
+
+        </Spinner>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_weight="1">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Rating :      "
+            android:paddingTop="17dp"
+            android:paddingBottom="5dp"
+            android:paddingLeft="15dp"
+            android:layout_weight="0.3"/>
+
+        <Spinner
+            android:id="@+id/spinner_rating"
+            android:textAlignment="center"
+            style="@style/Widget.AppCompat.Spinner.Underlined"
+            android:backgroundTint="@android:color/holo_blue_bright"
+            android:layout_width="170dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.6">
+
+        </Spinner>
+    </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/button_applyfilters"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp"
+                android:text="Apply Filters" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/booksearch_filterwindow"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+        <LinearLayout
+            android:id="@+id/linear_layout_container"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="8dp">
+            </View>
+            <android.support.v7.widget.RecyclerView
+
+                android:id="@+id/booksearch_recyclerview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </android.support.v7.widget.RecyclerView>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/empty_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:paddingTop="20dp"
+            android:drawableLeft="@drawable/ic_notebook"
+            android:text="no books found!"
+            android:visibility="invisible"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+            android:textSize="18sp" />
+
+    </FrameLayout>
+
+</RelativeLayout>
